@@ -71,7 +71,10 @@ def run_query(query: str, search: HybridSearch, reranker: CrossEncoderReranker) 
             client = OpenAI()
             context_str = "\n\n".join(contexts)
             resp = client.chat.completions.create(model="gpt-4o-mini", messages=[
-                {"role": "system", "content": "Trả lời CHỈ dựa trên context. Nếu không có → nói 'Không tìm thấy.'"},
+                {"role": "system", "content": """Bạn là trợ lý AI. YÊU CẦU QUAN TRỌNG:
+1. Trả lời NGẮN GỌN, ĐÚNG TRỌNG TÂM câu hỏi. KHÔNG vòng vo, KHÔNG lặp lại câu hỏi.
+2. CHỈ dựa trên Context.
+3. Nếu không có thông tin, CHỈ trả lời 'Không tìm thấy.'"""},
                 {"role": "user", "content": f"Context:\n{context_str}\n\nCâu hỏi: {query}"},
             ])
             answer = resp.choices[0].message.content

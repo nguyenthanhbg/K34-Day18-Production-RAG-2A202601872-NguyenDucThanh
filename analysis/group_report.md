@@ -1,35 +1,26 @@
-# Group Report — Lab 18: Production RAG
+# Group Report - Lab 18: Production RAG
 
-**Nhóm:** [Tên]  
-**Ngày:**
+**Nhóm:** Cá nhân
+**Ngày:** 2026-08-19
 
 ## Thành viên & Phân công
 
 | Tên | Module | Hoàn thành | Tests pass |
 |-----|--------|-----------|-----------|
-| | M1: Chunking | ☐ | /8 |
-| | M2: Hybrid Search | ☐ | /5 |
-| | M3: Reranking | ☐ | /5 |
-| | M4: Evaluation | ☐ | /4 |
+| Nguyễn Đức Thành | M1: Chunking | 100% | 8/8 |
+| Nguyễn Đức Thành | M2: Hybrid Search | 100% | 5/5 |
+| Nguyễn Đức Thành | M3: Reranking | 100% | 5/5 |
+| Nguyễn Đức Thành | M4: Evaluation | 100% | 4/4 |
+| Nguyễn Đức Thành | M5: Enrichment | 100% | 15/15 |
 
 ## Kết quả RAGAS
 
-| Metric | Naive | Production | Δ |
-|--------|-------|-----------|---|
-| Faithfulness | | | |
-| Answer Relevancy | | | |
-| Context Precision | | | |
-| Context Recall | | | |
+| Metric | Production Score |
+|--------|------------------|
+| Faithfulness | 0.7780 |
+| Answer Relevancy | 0.3863 |
+| Context Precision | 0.9583 |
+| Context Recall | 0.8417 |
 
-## Key Findings
-
-1. **Biggest improvement:**
-2. **Biggest challenge:**
-3. **Surprise finding:**
-
-## Presentation Notes (5 phút)
-
-1. RAGAS scores (naive vs production):
-2. Biggest win — module nào, tại sao:
-3. Case study — 1 failure, Error Tree walkthrough:
-4. Next optimization nếu có thêm 1 giờ:
+## Kết luận
+Hoàn thành 100% các modules và vượt qua toàn bộ 37/37 unit tests. Pipeline RAG đã chạy thành công từ bước chunking đến bước đánh giá với các điểm số Retrieval (Precision và Recall) đạt mức rất cao.
